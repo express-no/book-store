@@ -1,0 +1,122 @@
+@import "../fonts/stylesheet.css";
+@import "./components/variables.css";
+
+:root {
+  font-family: "Zen Loop", sans-serif;
+  font-size: 35px;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    var(--background-dark),
+    var(--background-middle)
+  );
+  padding: 0 20%;
+}
+
+/* common */
+
+form {
+  width: 75%;
+}
+
+input:not([type="file"]),
+select {
+  display: block;
+  border-radius: 5px;
+  border: none;
+
+  width: 100%;
+  height: 3em;
+  background-color: var(--background-light);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px white;
+}
+
+button {
+  padding: 0.7em 2em;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+button:hover {
+  background-color: var(--background-light);
+}
+
+.float-block::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.container {
+  padding: 20px 0;
+}
+
+/* header  */
+
+header {
+  padding: 20px 0;
+}
+
+header nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.left-nav {
+  float: left;
+}
+
+.right-nav {
+  float: right;
+}
+
+header ul {
+  margin: 0;
+}
+header ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+/* body */
+.main-content {
+  padding: 20px 0;
+}
+
+.search {
+  padding-bottom: 50px;
+}
+
+.list {
+  padding: 50px 0;
+}
+
+.list .element {
+  padding: 20px 70px 20px 0;
+}

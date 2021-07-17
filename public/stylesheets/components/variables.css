@@ -1,0 +1,10 @@
+:root {
+  --main-color: 200;
+  --second-color: calc(var(--main-color)-30);
+
+  --background-dark: hsl(var(--main-color), 100%, 20%);
+  --background-middle: hsl(var(--main-color), 100%, 30%);
+  --background-light: hsl(var(--main-color), 100%, 50%);
+
+  --color: hsl(var(--main-color), 100%, 90%);
+}

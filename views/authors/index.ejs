@@ -1,0 +1,21 @@
+<h1>Search Authors</h1>
+
+<form action="/authors" method="GET">
+  <div>
+    <label>Name</label>
+    <input type="text" name="name" value="<%= searchOptions.name %>" />
+  </div>
+  <button type="submit">Search</button>
+</form>
+
+<div class="container">
+  <% authors.forEach(author => { %>
+  <div class="container float-block">
+    <div class="left"><%= author.name %></div>
+    <div class="right">
+      <a href="/authors/<%= author.id %>">view</a>
+      <a href="/authors/<%= author.id %>/edit">edit</a>
+    </div>
+  </div>
+  <% }); %>
+</div>
