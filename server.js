@@ -59,6 +59,11 @@ app.use(methodOverride("_method"));
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+  res.locals.login = req.user;
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);

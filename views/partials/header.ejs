@@ -10,8 +10,13 @@
         <li><a href="/authors/new">Add Author</a></li>
         <li><a href="/books">Books</a></li>
         <li><a href="/books/new">Add Book</a></li>
+
+        <% if(locals.login) { %>
+        <li><a href="/users/profile"><%= login.name %> </a></li>
+        <% } else { %>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
+        <% } %>
       </ul>
     </div>
   </nav>
